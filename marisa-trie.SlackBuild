@@ -89,16 +89,8 @@ set -e # Exit on most errors
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
-cd $TMP
-if [ ! -d $PRGNAM ]; then
-    echo $PRGNAM 'not found.'
-    echo 'use `git clone https://github.com/s-yata/marisa-trie` download it.'
-    exit -1
-fi
-rm -rf $PRGNAM
-cp -r $CWD/$PRGNAM .
-cd $PRGNAM
-chown -R root:root .
+unzip master.zip
+cd "${PRGNAM}-master"
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
   -o -perm 511 \) -exec chmod 755 {} \; -o \
