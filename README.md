@@ -9,6 +9,7 @@ Matching Algorithm with Recursively Implemented StorAge (MARISA) is a static and
 git clone https://github.com/slackwarecn-slackbuilds/marisa-trie
 cd marisa-trie
 source marisa-trie.info
+wget $DOWNLOAD
 ./marisa-trie.SlackBuild
 ```
 
